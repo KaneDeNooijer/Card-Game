@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" extends="struts-default">
+
+		<action name="higher" class="actions.GameAction" method="higher">
+			<result name="success">/game.jsp</result>
+			<result name="gameover">/gameover.jsp</result>
+		</action>
+
+		<action name="lower" class="actions.GameAction" method="lower">
+			<result name="success">/game.jsp</result>
+			<result name="gameover">/gameover.jsp</result>
+		</action>
+		
+		<action name="setup" class="actions.GameAction" method="setup">
+			<result name="success">/game.jsp</result>
+		</action>
+		
+		<action name="save" class="actions.SaveAction" method="save">
+			<result>/index.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
